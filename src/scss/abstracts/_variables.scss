@@ -1,0 +1,39 @@
+/* Font sizes */
+
+$font-sizes: (
+    900: 5rem,
+    800: 3.75rem,
+    600: 1.6875rem,
+    500: 1.3125rem,
+    400: 1.125rem,
+    300: 1rem,
+);
+
+
+/* sizes */
+
+$sizes: (
+    8: 0.5rem,
+    12: 0.75rem,
+    16: 1rem,
+    20: 1.25rem,
+    24: 1.5rem,
+    32: 2rem,
+    36: 2.25rem,
+);
+
+
+/* Default Colors */
+
+$colors: (
+  neutral: (
+    900: #212121,
+    400: #5c5c5c,
+    200: #f8f8f8,
+    100: #ffffff,
+  ),
+  primary: (
+    400: #ff6635,
+    500: #dd4e11,
+  ),
+);
