@@ -9,6 +9,8 @@
 @import './base/reset';
 @import './base/typography';
 
+@import './components/weatherBox.scss';
+
 @import 'layout/navigation';
 @import 'layout/grid';
 @import 'layout/header';
