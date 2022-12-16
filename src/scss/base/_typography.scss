@@ -4,7 +4,42 @@
     font-style: normal;
     font-weight: 300;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-  }
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(/src/assets/fonts/Raleway-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url(/src/assets/fonts/Raleway-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Raleway';
+  src: url(/src/assets/fonts/Raleway-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(/src/assets/fonts/Raleway-ExtraBold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url(/src/assets/fonts/Raleway-Black.ttf);
+  font-weight: 900;
+}
+
+
+
+
+
+
 
 
   //google icons

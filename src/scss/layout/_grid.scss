@@ -1,0 +1,5 @@
+.forecast {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+}
