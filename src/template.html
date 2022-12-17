@@ -67,12 +67,13 @@
                 </div>
                  <section class="forecast wrapper">
 
-                    <div class="weather-box bg-main-blueBg-100 clr-neutral-200 padding-20">
+                    <div class="weather-box bg-main-blueBg-100 clr-neutral-200 
+                    fs-500 padding-20">
                         <h3 class="">Tomorrow</h3>
                         <img class="weather-img margin-block-16" src="" alt="">
-                        <div class="temp flex">
-                            <p>16<span>&#8451</span></p>
-                            <p>11<span>&#8451</span></p>
+                        <div class="temp flex ">
+                            <p class="">16<span>&#8451</span></p>
+                            <p class=" clr-neutral-400">11<span>&#8451</span></p>
                         </div>
                     </div>
 
@@ -115,14 +116,32 @@
 
                  </section>
                  <section class="highlight clr-neutral-200 padding-20">
-                    <h2>Today's Highlights</h2>
+                    <h2 class="fs-24">Today's Highlights</h2>
                     <div class="highlight-box bg-main-blueBg-100">
                         <h3>Wind status</h3>
-                        <p>7 <span>mph</span> </p>
+                        <p class="fs-800">7 <span>mph</span> </p>
                     </div>
-                    <div class="highlight-box bg-main-blueBg-100"></div>
-                    <div class="highlight-box bg-main-blueBg-100"></div>
-                    <div class="highlight-box bg-main-blueBg-100"></div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Humidity</h3>
+                        <p class="fs-800">84%</p>
+                        <div>
+                            <div class="progress">
+
+                                <span>0</span>
+                                <span>50</span>
+                                <span>100</span>
+                            </div>
+                            <progress class="progress-bar" id="humidity" value="84" max="100"> 32% </progress>
+                        </div>
+                    </div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Visibility</h3>
+                        <p class="fs-800">6,4 miles</p>
+                    </div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Air Pressure</h3>
+                        <p class="fs-800">998 mb</p>
+                    </div>
 
                  </section>
                  <footer class="footer">

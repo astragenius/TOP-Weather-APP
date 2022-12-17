@@ -3,3 +3,11 @@
     gap: 2em;
     grid-template-columns: repeat(2, 1fr);
 }
+
+.content-right-header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    padding-block: 1em;
+}
+   
