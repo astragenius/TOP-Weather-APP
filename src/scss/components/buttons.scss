@@ -1,10 +1,16 @@
+
+.btn {
+    cursor: pointer;
+    padding: 0.25em 1em;
+    border: none;
+}
 .convert-btn {
     display: grid;
-    border: none;
     place-content: center;
     border-radius: 50%;
     aspect-ratio: 1;
     padding: 0.5em;
-    cursor: pointer;
+    
     
 }
+
