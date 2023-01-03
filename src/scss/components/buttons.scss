@@ -1,8 +1,20 @@
 
 .btn {
     cursor: pointer;
-    padding: 0.25em 1em;
     border: none;
+}
+.search-place-btn {
+    padding: 0.25em 1em;
+
+}
+.search-btn {
+
+    background-color: #3C47E9;
+    color: #E7E7EB;
+    padding: 0.5em 1em;
+    font-weight: 600;
+    line-height: 19px;
+    
 }
 .convert-btn {
     display: grid;
@@ -12,5 +24,17 @@
     padding: 0.5em;
     
     
+}
+
+.close-btn {
+
+    background-color: transparent;
+    color: #E7E7EB;
+    
+
+}
+.close-btn-container {
+    display: flex;
+    justify-content: flex-end;
 }
 

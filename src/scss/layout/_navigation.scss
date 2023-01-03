@@ -1,0 +1,39 @@
+.search-field {
+    
+}
+
+.search-input {
+    display: flex;
+    border: 1px solid white;
+    align-items: center;
+    color: white;
+    padding-left: 0.5em;
+    
+    input {
+        background-color: transparent;
+        border: none;
+        padding: 0.5em 0.8em;
+    }
+    input::-webkit-input-placeholder {
+        color: white;
+    }
+    input::-moz-placeholder {
+        color: white;
+    }
+    input:-ms-input-placeholder {
+        color: white;
+    }
+    input::-ms-input-placeholder {
+        color: white;
+    }
+    input::placeholder {
+        color: white;
+    }
+    
+}
+
+.search-input-container {
+    display: flex;
+    gap: 0.8em;
+}
+
