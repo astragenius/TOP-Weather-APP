@@ -39,4 +39,24 @@
     display: flex;
     justify-content: flex-end;
 }
+.previous-search-container {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.previous-btn {
+    
+    background-color: transparent;
+    color: #E7E7EB;
+    padding: 0.9em 1em;
+    text-align: left;
+    opacity: 0.5;
+    font-weight: 600;
+    border-radius: 2px;
+}
+.previous-btn:hover {
+    transition: 300ms ease;
+    outline: 1px solid #E7E7EB;
+}
 
