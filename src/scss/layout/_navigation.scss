@@ -1,13 +1,18 @@
 
+.content-left {
+    position: relative;
+}
+
 .content-left-header {
   
-    z-index: 100;
-    height: 100vh;
+    //z-index: 100;
+    //height: 100vh;
     
     
 }
 .search-field {
     position: absolute;
+    display: none;
     margin-top: 2em;
     background-color: #1E213A;
    

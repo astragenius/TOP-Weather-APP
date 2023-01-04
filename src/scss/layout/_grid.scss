@@ -5,10 +5,35 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
+.main-container {
+   /* display: grid;
+   grid-template-columns: 500px 1fr;
+   justify-content: center;
+   height: 100vh; */
+
+   display: flex;
+   flex-wrap: wrap;
+   
+
+   
+}
+
+.content-right {
+    
+}
+
+.content-left {
+
+    flex: 1 1 500px;
+    background-color: black;
+
+}
+
+
+
 .content-right-header {
     display: flex;
     justify-content: flex-end;
     gap: 1em;
     padding-block: 1em;
 }
-   

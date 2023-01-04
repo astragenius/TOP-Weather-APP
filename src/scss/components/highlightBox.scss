@@ -1,6 +1,14 @@
 .highlight {
-    display: grid;
-    gap: 1.5em;
+    //display: grid;
+    //gap: 1.5em;
+    //grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+
+
+    --w:328px;
+    --n:2;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(max(var(--w), 100%/(var(--n) + 1) + 0.1%),1fr)); /*this */
+    gap: 2em;
 }
 
 .highlight-box {
