@@ -1,17 +1,43 @@
-.forecast {
-    display: grid;
-    gap: 2em;
-    border-radius: 3px;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+body {
+    @include breakpoint-up('small') {
+
+        display: grid;
+        place-items: center;
+    }
 }
 
+
+
 .main-container {
-   
-   
+
+    @include breakpoint-up('small') {
+        
+        display: flex;
+        gap: 5em;
+        height: 80vh;
+
+    }
 }
+
+.main-weather-data-content {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up('small') {
+
+        height: 60vh;
+        justify-content: space-evenly;
+    }
+
+}
+
+
 
 .content-right {
     
+    flex: 1 1 80%;
     
     
 }
@@ -19,7 +45,7 @@
 .content-left {
 
    
-    
+    flex: 1 1 40%;
 
 }
 
@@ -28,10 +54,17 @@
     display:grid;
   
    
-    --w:100%;
+    --w:328px;
     --n:2;
     grid-template-columns:repeat(auto-fit,minmax(max(var(--w), 100%/(var(--n) + 1) + 0.1%),1fr));  
     gap: 2em;
+}
+
+.forecast {
+    display: grid;
+    gap: 2em;
+    border-radius: 3px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
 
