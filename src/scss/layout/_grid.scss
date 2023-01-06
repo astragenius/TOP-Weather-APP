@@ -1,7 +1,7 @@
 .forecast {
     display: grid;
     gap: 2em;
-   
+    border-radius: 3px;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
@@ -26,10 +26,8 @@
 .highlight {
     
     display:grid;
-   /*  gap: 1.5em;
-    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr)) */;
-
-
+  
+   
     --w:100%;
     --n:2;
     grid-template-columns:repeat(auto-fit,minmax(max(var(--w), 100%/(var(--n) + 1) + 0.1%),1fr));  
