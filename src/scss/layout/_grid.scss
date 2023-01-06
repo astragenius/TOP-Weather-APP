@@ -1,8 +1,8 @@
 .forecast {
-    /* display: grid;
+    display: grid;
     gap: 2em;
    
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
 .main-container {
@@ -24,16 +24,16 @@
 }
 
 .highlight {
-    //display: grid;
-    /* display:grid;
-    gap: 1.5em;
-    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr)); */
+    
+    display:grid;
+   /*  gap: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(328px, 1fr)) */;
 
 
-    --w:300px;
+    --w:100%;
     --n:2;
-    //grid-template-columns:repeat(auto-fit,minmax(max(var(--w), 100%/(var(--n) + 1) + 0.1%),1fr)); /*this */
-    //gap: 2em;
+    grid-template-columns:repeat(auto-fit,minmax(max(var(--w), 100%/(var(--n) + 1) + 0.1%),1fr));  
+    gap: 2em;
 }
 
 
@@ -44,7 +44,7 @@
     justify-content: space-between;
     align-items: center;
    
-   border: 2px solid magenta;
+   
 }
 
 
