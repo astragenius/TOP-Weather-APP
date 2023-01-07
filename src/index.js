@@ -43,14 +43,11 @@ async function getCords(cityName) {
 async function getCity(coords) {
     const lon = coords.lon
     const lat = coords.lat
-    const response = fetch(
+    const response = await fetch(
         `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset,precipitation_sum,rain_sum,showers_sum,snowfall_sum,precipitation_hours,windspeed_10m_max,windgusts_10m_max,winddirection_10m_dominant,shortwave_radiation_sum,et0_fao_evapotranspiration&timezone=auto&start_date=2023-01-07&end_date=2023-01-12`,
         { mode: 'cors' }
     )
-
-    const data = response.then((res, rej) => {
-        return res.json()
-    })
+    const data = await response.json()
 
     return data
 }
