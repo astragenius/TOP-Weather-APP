@@ -1,6 +1,6 @@
 import './scss/index.scss'
-import img from './assets/img/sun rain.svg'
-import img1 from './assets/img/rain.svg'
+import img from './assets/img/clear-day.svg'
+import img1 from './assets/img/heavy-showers.svg'
 import { DOM } from './js/domFunctions'
 
 const imgs = document.getElementById('img')

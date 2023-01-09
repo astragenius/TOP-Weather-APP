@@ -1,5 +1,9 @@
 import { fetchData, getInput } from './apiLogic'
-import { formatTime, getWeatherStatus } from './utilityFunctions'
+import {
+    formatTime,
+    getWeatherStatus,
+    getWeatherIcon,
+} from './utilityFunctions'
 
 export class DOM {
     static initDOM() {
@@ -33,7 +37,7 @@ export class DOM {
         todayCity.textContent = getInput()
         todayDate.textContent = formatTime(data.time)
         todayStatus.textContent = getWeatherStatus(data.weathercode)
-        //todayImg.src = getWeatherIcon(data.weathercode)
+        todayImg.src = getWeatherIcon(data.weathercode)
     }
     static renderHighlights(data) {}
     static renderfiveDayForcast(data) {}
