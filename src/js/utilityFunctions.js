@@ -96,5 +96,8 @@ function getWeatherStatus(data) {
             return 'Thunderstorm'
     }
 }
+function convertKm(data) {
+    return Math.round(data / 1000)
+}
 
-export { formatTime, getWeatherIcon, getWeatherStatus }
+export { formatTime, getWeatherIcon, getWeatherStatus, convertKm }
