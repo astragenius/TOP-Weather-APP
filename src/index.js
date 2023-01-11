@@ -9,14 +9,4 @@ import formatISO from 'date-fns/formatISO'
 const imgs = document.getElementById('img')
 const weatherImg = [...document.querySelectorAll('.weather-img')]
 
-imgs.src = img
-
-weatherImg.forEach((el) => {
-    el.src = img1
-})
-
 document.addEventListener('DOMContentLoaded', DOM.initDOM)
-
-const result = format(new Date('2023-01-15'), 'iii dd MMM')
-
-console.log(result)

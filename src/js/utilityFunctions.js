@@ -13,6 +13,7 @@ import thunderstorm from '../assets/img/thunderstorm-showers.svg'
 import format from 'date-fns/format'
 
 function formatTime(time) {
+    console.log(time)
     return format(new Date(time), 'iii dd MMM')
 }
 function getWeatherIcon(data) {

@@ -24,6 +24,7 @@ export class DOM {
         //renderHighlights
         DOM.renderHighlights(data)
         //renderfiveDayForcast
+        DOM.renderfiveDayForcast(data.daily)
 
         console.log(data)
     }
@@ -54,5 +55,31 @@ export class DOM {
         visibility.textContent = convertKm(data.hourly.visibility[0])
         airPressure.textContent = data.hourly.surface_pressure[0]
     }
-    static renderfiveDayForcast(data) {}
+    static renderfiveDayForcast(data) {
+        let container = document.querySelector('.forecast')
+        container.innerHTML = ``
+        const maxTemp = data.temperature_2m_max
+        const minTemp = data.temperature_2m_min
+        const time = data.time
+        const weathercode = data.weathercode
+
+        console.log(container)
+
+        for (let i = 1; i <= 5; i++) {
+            container.innerHTML += `
+            <div class="weather-box bg-main-blueBg-100 clr-neutral-200 fs-300 padding-20">
+                <h3 class="">${formatTime(time[i])}</h3>
+                <img class="weather-img margin-block-16" src="${getWeatherIcon(
+                    weathercode[i]
+                )}" alt="">
+                <div class="temp flex ">
+                    <p class="">${Math.round(maxTemp[i])}<span>&#8451</span></p>
+                    <p class=" clr-neutral-400">${Math.round(
+                        minTemp[i]
+                    )}<span>&#8451</span></p>
+                </div>
+            </div>
+`
+        }
+    }
 }

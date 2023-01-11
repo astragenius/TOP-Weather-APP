@@ -27,7 +27,7 @@
     flex: 2;
     border: 1px solid #E7E7EB;
     border-radius: 3px;
-    opacity: 0.5;
+    opacity: 0.6;
     align-items: center;
     color: white;
     padding-left: 0.5em;
@@ -36,6 +36,7 @@
         background-color: transparent;
         border: none;
         padding: 0.5em 0.8em;
+        color: white;
     }
     input::-webkit-input-placeholder {
         color: white;
