@@ -10,9 +10,10 @@ import partlyCloudy from '../assets/img/partly-cloudy-day.svg'
 import showers from '../assets/img/showers.svg'
 import snow from '../assets/img/snow.svg'
 import thunderstorm from '../assets/img/thunderstorm-showers.svg'
+import format from 'date-fns/format'
 
 function formatTime(time) {
-    return time
+    return format(new Date(time), 'iii dd MMM')
 }
 function getWeatherIcon(data) {
     switch (data) {
