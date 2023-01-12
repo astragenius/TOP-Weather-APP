@@ -4,6 +4,7 @@ import {
     getWeatherStatus,
     getWeatherIcon,
     convertKm,
+    errorFunction,
 } from './utilityFunctions'
 
 export class DOM {
@@ -18,6 +19,7 @@ export class DOM {
 
     static async renderWeather() {
         const data = await fetchData()
+        console.log(data)
 
         //renderTodayWeather
         DOM.renderTodayWeather(data.current_weather)
@@ -82,4 +84,5 @@ export class DOM {
 `
         }
     }
+    static renderError() {}
 }

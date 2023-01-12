@@ -4,11 +4,13 @@ import { errorFunction } from './utilityFunctions'
 
 function getInput() {
     const searchInput = document.getElementById('search-input').value.trim()
+
     return searchInput
 }
 
 async function fetchData() {
     const input = getInput()
+    if (input === '') return alert('Please give a valid city input')
     const coordinates = await getCords(input).catch(errorFunction)
     const cityData = await getWeatherData(coordinates)
 
