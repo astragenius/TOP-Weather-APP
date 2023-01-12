@@ -41,6 +41,8 @@ function getWeatherIcon(data) {
             return heavySleet
         case 71:
         case 73:
+        case 85:
+        case 86:
             return snow
         case 75:
         case 77:
@@ -101,5 +103,15 @@ function getWeatherStatus(data) {
 function convertKm(data) {
     return Math.round(data / 1000)
 }
+function errorFunction(err) {
+    console.log('TEST')
+    console.log(err)
+}
 
-export { formatTime, getWeatherIcon, getWeatherStatus, convertKm }
+export {
+    formatTime,
+    getWeatherIcon,
+    getWeatherStatus,
+    convertKm,
+    errorFunction,
+}
