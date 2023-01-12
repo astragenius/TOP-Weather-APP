@@ -4,8 +4,11 @@ import { errorFunction } from './utilityFunctions'
 
 function getInput() {
     const searchInput = document.getElementById('search-input').value.trim()
-
-    return searchInput
+    if (searchInput === '') {
+        return 'Berlin'
+    } else {
+        return searchInput
+    }
 }
 
 async function fetchData() {

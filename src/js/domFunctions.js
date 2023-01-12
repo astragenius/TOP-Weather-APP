@@ -10,6 +10,7 @@ import {
 export class DOM {
     static initDOM() {
         DOM.initInput()
+        DOM.renderWeather()
     }
 
     static initInput() {
