@@ -3,7 +3,7 @@ import formatISO from 'date-fns/formatISO'
 import { errorFunction } from './utilityFunctions'
 
 function getInput() {
-    const searchInput = document.getElementById('search-input').value
+    const searchInput = document.getElementById('search-input').value.trim()
     return searchInput
 }
 
