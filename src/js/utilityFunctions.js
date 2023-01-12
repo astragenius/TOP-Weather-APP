@@ -107,6 +107,10 @@ function errorFunction(err) {
     console.log('TEST')
     console.log(err)
 }
+function celsiusConverter() {
+    const todayTemp = document.getElementById('todayTemp')
+    console.log(todayTemp)
+}
 
 export {
     formatTime,
@@ -114,4 +118,5 @@ export {
     getWeatherStatus,
     convertKm,
     errorFunction,
+    celsiusConverter,
 }

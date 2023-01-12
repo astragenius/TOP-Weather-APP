@@ -5,17 +5,23 @@ import {
     getWeatherIcon,
     convertKm,
     errorFunction,
+    celsiusConverter,
 } from './utilityFunctions'
 
 export class DOM {
     static initDOM() {
-        DOM.initInput()
+        DOM.init()
         DOM.renderWeather()
     }
 
-    static initInput() {
+    static init() {
         const searchBtn = document.getElementById('search-btn')
+        const convertCels = document.getElementById('celsiusConvert')
+        const convertFahr = document.getElementById('fahrConvert')
+
         searchBtn.addEventListener('click', DOM.renderWeather)
+        convertCels.addEventListener('click', DOM.convertToCel)
+        convertFahr.addEventListener('click', DOM.convertToFahr)
     }
 
     static async renderWeather() {
@@ -85,5 +91,12 @@ export class DOM {
 `
         }
     }
+    static convertToCel() {
+        celsiusConverter()
+    }
+    static convertToFahr() {
+        console.log('TEST')
+    }
+
     static renderError() {}
 }
