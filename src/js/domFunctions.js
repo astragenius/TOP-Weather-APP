@@ -5,8 +5,6 @@ import {
     getWeatherIcon,
     convertKm,
     errorFunction,
-    celsiusConverter,
-    fahrenheitConverter,
 } from './utilityFunctions'
 
 export class DOM {
@@ -36,9 +34,9 @@ export class DOM {
         //renderHighlights
         DOM.renderHighlights(data)
         //renderfiveDayForcast
-        DOM.renderfiveDayForcast(data.daily)
+        DOM.renderfiveDayForcast(data)
 
-        console.log(data)
+        //console.log(data)
     }
 
     static renderTodayWeather(data) {
@@ -74,10 +72,11 @@ export class DOM {
     static renderfiveDayForcast(data) {
         let container = document.querySelector('.forecast')
         container.innerHTML = ``
-        const maxTemp = data.temperature_2m_max
-        const minTemp = data.temperature_2m_min
-        const time = data.time
-        const weathercode = data.weathercode
+        const maxTemp = data.daily.temperature_2m_max
+        const minTemp = data.daily.temperature_2m_min
+        const time = data.daily.time
+        const weathercode = data.daily.weathercode
+        const tempUnit = data.daily_units.temperature_2m_max
 
         console.log(container)
 
@@ -89,10 +88,12 @@ export class DOM {
                     weathercode[i]
                 )}" alt="">
                 <div class="temp flex ">
-                    <p class="">${Math.round(maxTemp[i])}<span>&#8451</span></p>
+                    <p class="">${Math.round(
+                        maxTemp[i]
+                    )}<span>${tempUnit}</span></p>
                     <p class=" clr-neutral-400">${Math.round(
                         minTemp[i]
-                    )}<span>&#8451</span></p>
+                    )}<span>${tempUnit}</span></p>
                 </div>
             </div>
 `

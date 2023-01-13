@@ -107,14 +107,6 @@ function errorFunction(err) {
     console.log('TEST')
     console.log(err)
 }
-function celsiusConverter() {
-    const todayTemp = document.getElementById('todayTemp')
-    return ((Number(todayTemp.textContent) - 32) * 5) / 9
-}
-function fahrenheitConverter() {
-    const todayTemp = document.getElementById('todayTemp')
-    return Number(todayTemp.textContent) * 1.8 + 32
-}
 
 export {
     formatTime,
@@ -122,6 +114,4 @@ export {
     getWeatherStatus,
     convertKm,
     errorFunction,
-    celsiusConverter,
-    fahrenheitConverter,
 }
