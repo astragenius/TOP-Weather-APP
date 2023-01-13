@@ -6,6 +6,7 @@ import {
     convertKm,
     errorFunction,
     celsiusConverter,
+    fahrenheitConverter,
 } from './utilityFunctions'
 
 export class DOM {
@@ -20,16 +21,18 @@ export class DOM {
         const convertFahr = document.getElementById('fahrConvert')
 
         searchBtn.addEventListener('click', DOM.renderWeather)
-        convertCels.addEventListener('click', DOM.convertToCel)
-        convertFahr.addEventListener('click', DOM.convertToFahr)
+        convertCels.addEventListener('click', DOM.renderWeather)
+        convertFahr.addEventListener('click', () => {
+            DOM.renderWeather('fahrenheit')
+        })
     }
 
-    static async renderWeather() {
-        const data = await fetchData()
+    static async renderWeather(unit) {
+        const data = await fetchData(unit)
         console.log(data)
 
         //renderTodayWeather
-        DOM.renderTodayWeather(data.current_weather)
+        DOM.renderTodayWeather(data)
         //renderHighlights
         DOM.renderHighlights(data)
         //renderfiveDayForcast
@@ -44,12 +47,16 @@ export class DOM {
         const todayCity = document.getElementById('todayCity')
         const todayDate = document.getElementById('todayDate')
         const todayStatus = document.getElementById('todayWeatherStatus')
+        const todayTempUnit = document.getElementById('todayTempUnit')
 
-        todayTemp.textContent = Math.round(data.temperature)
+        todayTemp.textContent = Math.round(data.current_weather.temperature)
         todayCity.textContent = getInput()
-        todayDate.textContent = formatTime(data.time)
-        todayStatus.textContent = getWeatherStatus(data.weathercode)
-        todayImg.src = getWeatherIcon(data.weathercode)
+        todayDate.textContent = formatTime(data.current_weather.time)
+        todayStatus.textContent = getWeatherStatus(
+            data.current_weather.weathercode
+        )
+        todayImg.src = getWeatherIcon(data.current_weather.weathercode)
+        todayTempUnit.textContent = data.daily_units.temperature_2m_max
     }
     static renderHighlights(data) {
         const windspeed = document.getElementById('windspeed')
@@ -90,12 +97,6 @@ export class DOM {
             </div>
 `
         }
-    }
-    static convertToCel() {
-        celsiusConverter()
-    }
-    static convertToFahr() {
-        console.log('TEST')
     }
 
     static renderError() {}

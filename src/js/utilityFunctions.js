@@ -109,7 +109,11 @@ function errorFunction(err) {
 }
 function celsiusConverter() {
     const todayTemp = document.getElementById('todayTemp')
-    console.log(todayTemp)
+    return ((Number(todayTemp.textContent) - 32) * 5) / 9
+}
+function fahrenheitConverter() {
+    const todayTemp = document.getElementById('todayTemp')
+    return Number(todayTemp.textContent) * 1.8 + 32
 }
 
 export {
@@ -119,4 +123,5 @@ export {
     convertKm,
     errorFunction,
     celsiusConverter,
+    fahrenheitConverter,
 }
