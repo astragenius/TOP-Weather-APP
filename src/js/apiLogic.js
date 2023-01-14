@@ -11,13 +11,17 @@ function getInput() {
     }
 }
 
-async function fetchData(unit) {
+async function fetchData(unit, coordinates) {
     const input = getInput()
     if (input === '') return alert('Please give a valid city input')
-    const coordinates = await getCords(input).catch(errorFunction)
-    const cityData = await getWeatherData(coordinates, unit)
-
-    return cityData
+    if (coordinates === undefined) {
+        const coordinates = await getCords(input).catch(errorFunction)
+        const cityData = await getWeatherData(coordinates, unit)
+        return cityData
+    } else {
+        const cityData = await getWeatherData(coordinates, unit)
+        return cityData
+    }
 }
 
 async function getCords(cityName) {
@@ -61,4 +65,4 @@ async function getWeatherData(coords, unit = 'celsius') {
     }
 }
 
-export { fetchData, getInput }
+export { fetchData, getInput, getWeatherData }

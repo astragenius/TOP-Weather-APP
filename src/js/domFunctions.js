@@ -1,16 +1,18 @@
-import { fetchData, getInput } from './apiLogic'
+import { fetchData, getInput, getWeatherData } from './apiLogic'
 import {
     formatTime,
     getWeatherStatus,
     getWeatherIcon,
     convertKm,
     errorFunction,
+    getUserCords,
 } from './utilityFunctions'
 
 export class DOM {
     static initDOM() {
         DOM.init()
-        DOM.renderWeather()
+        DOM.renderUserPosition()
+        //DOM.renderWeather()
     }
 
     static init() {
@@ -25,8 +27,9 @@ export class DOM {
         })
     }
 
-    static async renderWeather(unit) {
-        const data = await fetchData(unit)
+    static async renderWeather(unit, coords = undefined) {
+        console.log(coords)
+        const data = await fetchData(unit, coords)
         console.log(data)
 
         //renderTodayWeather
@@ -98,6 +101,13 @@ export class DOM {
             </div>
 `
         }
+    }
+
+    static async renderUserPosition() {
+        const data = await getUserCords()
+        const unit = 'celsius'
+        console.log(data)
+        DOM.renderWeather(unit, data)
     }
 
     static renderError() {}
