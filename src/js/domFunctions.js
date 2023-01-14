@@ -12,7 +12,6 @@ export class DOM {
     static initDOM() {
         DOM.init()
         DOM.renderUserPosition()
-        //DOM.renderWeather()
     }
 
     static init() {
@@ -28,7 +27,6 @@ export class DOM {
     }
 
     static async renderWeather(unit, coords = undefined) {
-        console.log(coords)
         const data = await fetchData(unit, coords)
         console.log(data)
 
@@ -38,8 +36,6 @@ export class DOM {
         DOM.renderHighlights(data)
         //renderfiveDayForcast
         DOM.renderfiveDayForcast(data)
-
-        //console.log(data)
     }
 
     static renderTodayWeather(data) {
@@ -51,7 +47,12 @@ export class DOM {
         const todayTempUnit = document.getElementById('todayTempUnit')
 
         todayTemp.textContent = Math.round(data.current_weather.temperature)
-        todayCity.textContent = getInput()
+
+        if (getInput() === '' || getInput() === 'Berlin') {
+            todayCity.textContent = `lat: ${data.latitude}, lon: ${data.longitude}`
+        } else {
+            todayCity.textContent = getInput()
+        }
         todayDate.textContent = formatTime(data.current_weather.time)
         todayStatus.textContent = getWeatherStatus(
             data.current_weather.weathercode
@@ -81,8 +82,6 @@ export class DOM {
         const weathercode = data.daily.weathercode
         const tempUnit = data.daily_units.temperature_2m_max
 
-        console.log(container)
-
         for (let i = 1; i <= 5; i++) {
             container.innerHTML += `
             <div class="weather-box bg-main-blueBg-100 clr-neutral-200 fs-300 padding-20">
@@ -104,10 +103,13 @@ export class DOM {
     }
 
     static async renderUserPosition() {
-        const data = await getUserCords()
-        const unit = 'celsius'
-        console.log(data)
-        DOM.renderWeather(unit, data)
+        if ('geolocation' in navigator) {
+            const data = await getUserCords()
+            const unit = 'celsius'
+            DOM.renderWeather(unit, data)
+        } else {
+            DOM.renderWeather()
+        }
     }
 
     static renderError() {}
