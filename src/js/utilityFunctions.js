@@ -103,7 +103,6 @@ function convertKm(data) {
     return Math.round(data / 1000)
 }
 function errorFunction(err) {
-    console.log('TEST')
     console.log(err)
 }
 
