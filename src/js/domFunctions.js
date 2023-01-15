@@ -116,12 +116,15 @@ export class DOM {
     static toggleMenu() {
         const button = document.querySelector('.search-menu-btn')
         const currentState = button.getAttribute('data-state')
+        const nav = document.querySelector('.search-field')
         if (!currentState || currentState === 'closed') {
             button.setAttribute('data-state', 'opened')
             button.setAttribute('aria-expanded', 'true')
+            nav.setAttribute('data-visible', 'true')
         } else {
             button.setAttribute('data-state', 'closed')
             button.setAttribute('aria-expanded', 'false')
+            nav.setAttribute('data-visible', 'false')
         }
     }
 

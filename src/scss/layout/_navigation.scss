@@ -10,16 +10,25 @@
     
     
 }
-.search-menu-btn[aria-expanded="false"] > .search-field {
-    border: red;
-    display: none;
+
+.search-field[data-visible="true"] {
+    
+    opacity: 1;
+    visibility: visible;
 }
+
 .search-field {
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
     position: absolute;
     margin-top: 2em;
     background-color: #1E213A;
     padding: 1em 2em;
     inset: 6% 0 0 0;
+
+
     
     
     
