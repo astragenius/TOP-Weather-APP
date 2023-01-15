@@ -1,0 +1,130 @@
+::-moz-selection {
+    background: hsl(var(--accent) / .8);
+    color: hsl(var(--bg));
+}
+
+::selection {
+    background: hsl(var(--accent) / .8);
+    color: hsl(var(--bg));
+}
+
+.search-input-container {
+    display: grid;
+    gap: 1vmax;
+    font-size: var(--size);
+   
+    //position: fixed;
+
+}
+
+.input-wrapper {
+    position: relative;
+    display: grid;
+    gap: .2em;
+    -webkit-margin-before: .6em;
+            margin-block-start: .6em;
+}
+
+.form-label {
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: .05em;
+    margin-inline: 0.45em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .1em .35em;
+    background-color: hsl(var(--muted));
+    transition: 
+        transform var(--tspeed-fast) var(--ttype_spuish),
+        background-color var(--tspeed-fast) var(--ttype_spuish);
+
+    
+}
+
+.form-input {
+    border: none;
+    border-radius: var(--radius);
+    padding: .35em .55em;
+    width: 100%;
+    background-color: hsl(var(--muted));
+    caret-color: hsl(var(--accent));
+    box-shadow: 
+        0 0 0 -.1em hsl(var(--bg)),
+        0 0 0 -.2em hsl(var(--accent) / .8);
+    transition: 
+        box-shadow var(--tspeed-slow) var(--ttype_spuish);
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 
+    0 0 0 .2em hsl(var(--bg)),
+    0 0 0 .4em hsl(var(--accent) / .8);
+}
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    transform: translate3d(0, -3.90em, 0);
+    //background-color: hsl(var(--bg));
+    background-color: #1E213A;
+    //color: hsl(var(--accent) / .8);
+    color: #f8f8f8;
+    font-weight: 700;
+    font-size: 1rem;
+
+}
+
+.form-input::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.form-input::-moz-placeholder {
+    opacity: 0;
+}
+
+.form-input:-ms-input-placeholder {
+    opacity: 0;
+}
+
+.form-input::-ms-input-placeholder {
+    opacity: 0;
+}
+
+.form-input::placeholder {
+    opacity: 0;
+}
+
+
+.search-btn {
+    font-size: var(--size);
+    background-color: hsl(var(--accent));
+    color: hsl(var(--bg));
+    padding: .4em 1.4em;
+    border-radius: .2em;
+    box-shadow: 
+        .05em .1em .9em hsl(var(--accent) / .3),
+        0 0 0 -.1em hsl(var(--bg)),
+        0 0 0 -.2em hsl(var(--accent));
+    transition: 
+        box-shadow var(--tspeed-slow) var(--ttype_spuish),
+        background-color var(--tspeed-slow) var(--ttype_spuish);
+}
+
+.search-btn:where(:active, :hover) {
+    background-color: hsl(var(--accent) / .8);
+    box-shadow: 
+        0 0 0 hsl(var(--accent) / .3),
+        0 0 0 -.1em hsl(var(--bg)),
+        0 0 0 -.2em hsl(var(--accent));
+}
+
+.search-btn:focus {
+    outline: none;
+
+}
+.search-btn:focus-visible {
+    box-shadow: 
+    0 0 0 hsl(var(--accent) / .3),
+    0 0 0 .2em hsl(var(--bg)),
+    0 0 0 .4em hsl(var(--accent) / .5);
+}

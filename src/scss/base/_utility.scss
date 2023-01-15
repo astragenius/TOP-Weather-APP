@@ -40,3 +40,40 @@
   .fw-500 {
     font-weight: 500;
   }
+
+
+  :root {
+
+
+    --hue: 240;
+    --size: 1.3rem;
+    --radius: .2em;
+    --tspeed-fast: 150ms;
+    --tspeed-slow: 400ms;
+    --ttype_spuish: cubic-bezier(0.86, -0.1, 0.27, 1.15);
+
+    --bg-light: var(--hue) 30% 94%;
+    --txt-light: var(--hue) 40% 5%;
+    --accent-light: var(--hue) 55% 50%;
+    --muted--light: var(--hue) 30% 99%;
+
+
+
+    --bg-dark: var(--hue) 15% 10%;
+    --txt-dark: var(--hue) 30% 88%;
+    --accent-dark: var(--hue) 50% 50%;
+    --muted-dark: var(--hue) 20% 4%;
+
+    /* --bg: var(--bg-dark);
+    --txt: var(--txt-dark);
+    --accent: var(--accent-dark);
+    --muted: var(--muted-dark);
+
+
+   */
+   --bg: var(--bg-light);
+   --txt: var(--txt-light);
+   --accent: var(--accent-light);
+   --muted: var(--muted--light);
+
+  }

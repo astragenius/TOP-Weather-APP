@@ -15,7 +15,7 @@ export class DOM {
     }
 
     static init() {
-        const searchBtn = document.getElementById('search-btn')
+        const searchBtn = document.querySelector('.search-btn')
         const convertCels = document.getElementById('celsiusConvert')
         const convertFahr = document.getElementById('fahrConvert')
         const menuBtn = document.querySelector('.search-menu-btn')

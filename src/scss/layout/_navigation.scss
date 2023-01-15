@@ -18,52 +18,9 @@
     margin-top: 2em;
     background-color: #1E213A;
     padding: 1em 2em;
-    inset: 6% 0 0 0;
-
-
-    
-    
+    inset: 10% 0 0 0;
     
 }
 
-.search-input {
-    display: flex;
-    flex: 2;
-    border: 1px solid #E7E7EB;
-    border-radius: 3px;
-    opacity: 0.6;
-    align-items: center;
-    color: white;
-    padding-left: 0.5em;
-    
-    input {
-        background-color: transparent;
-        border: none;
-        padding: 0.5em 0.8em;
-        color: white;
-    }
-    input::-webkit-input-placeholder {
-        color: white;
-    }
-    input::-moz-placeholder {
-        color: white;
-    }
-    input:-ms-input-placeholder {
-        color: white;
-    }
-    input::-ms-input-placeholder {
-        color: white;
-    }
-    input::placeholder {
-        color: white;
-    }
-    
-}
 
-.search-input-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8em;
-    //position: fixed;
-}
 
