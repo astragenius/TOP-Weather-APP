@@ -1,6 +1,11 @@
 
 .highlight-box {
     
+   display: flex;
+
+   flex-direction: column;
+   justify-content: center;
+   gap: 1em;
    padding-block: 2em;
    padding-inline: 1em;
    text-align: center;

@@ -42,14 +42,14 @@
                             </svg>
 
                         </button>
-                        <nav class="search-field" id="search-field" data-visible="true">
+                        <nav class="search-field" id="search-field" data-visible="false">
                            
 
                             <div class="search-input-container">
                                 
                                  <div class="input-wrapper">
-                                    <input type="text" id="firstname" class="form-input" placeholder="Search City" autocomplete="-name">
-                                    <label class="form-label" for="firstname">Search City</label>
+                                    <input type="text" id="cityname" class="form-input" placeholder="Search City" autocomplete="-name">
+                                    <label class="form-label" for="cityname">Search City</label>
                                 </div>
 
                                 <button class="btn search-btn">search</button>
@@ -83,8 +83,11 @@
     
                                 <span>Today -</span> 
                                 <span id="todayDate">Fri 5 Jun</span>
-                                <div class="margin-block-16 fw-600 flex"> <span class="material-symbols-outlined">
-                                    location_on</span> <span id="todayCity">Helsinki</span></div>
+                                <div class="fw-600 flex todayCity">
+                                    <span class="material-symbols-outlined ">
+                                    location_on</span> 
+                                    <span  id="todayCity">Helsinki</span>
+                                </div>
                             </div>
                         </div>
             
