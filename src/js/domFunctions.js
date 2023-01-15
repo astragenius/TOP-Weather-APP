@@ -128,5 +128,18 @@ export class DOM {
         }
     }
 
+    static addPreviousBtn() {
+        const previousContainer = document.querySelector(
+            '.previous-search-container'
+        )
+        const input = getInput()
+        if (input === '') {
+            console.log('test')
+            return
+        } else {
+            previousContainer.innerHTML += `<button class="btn previous-btn">${input}</button>`
+        }
+    }
+
     static renderError() {}
 }
