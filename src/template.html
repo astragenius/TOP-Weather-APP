@@ -16,14 +16,34 @@
             <section class="content-left bg-main-blueBg-100 ">
                 <div class=" ">
                     <header class="content-left-header padding-inline-16">
-                        <button class="btn search-place-btn margin-block-start-24">Search for Places</button>
-                        <nav class="search-field">
-                            <div class="close-btn-container">
+                        <button class="btn search-menu-btn margin-block-start-24" aria-controls="search-field" aria-expanded="false" >
+
+                            <svg stroke="var(--button-color)" class="hamburger" viewbox="0 0 100 100" width="30" height="30">
+
+                                <line class="line top"
+                                    x1="90" x2="10" y1="40" y2="40"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="80"
+                                    stroke-dashoffset="0">
+
+                                </line>
                                 
-                                <button class="btn close-btn"><span class="material-symbols-outlined">
-                                    close
-                                    </span></button>
-                            </div>
+                                <line class="line bottom"
+                                    x1="10" x2="90" y1="70" y2="70"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="80"
+                                    stroke-dashoffset="0">
+
+                                </line>
+
+
+                            </svg>
+
+                        </button>
+                        <nav class="search-field" id="search-field">
+                           
 
                             <div class="search-input-container">
 
@@ -85,18 +105,6 @@
                 </div>
                  <section class="forecast">
 
-                    <!-- <div class="weather-box bg-main-blueBg-100 clr-neutral-200 
-                    fs-500 padding-20">
-                        <h3 class="">Tomorrow</h3>
-                        <img class="weather-img margin-block-16" src="" alt="">
-                        <div class="temp flex ">
-                            <p class="">16<span>&#8451</span></p>
-                            <p class=" clr-neutral-400">11<span>&#8451</span></p>
-                        </div>
-                    </div>
-
-                   
-                    </div> -->
                     
 
                  </section>

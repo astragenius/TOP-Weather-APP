@@ -1,0 +1,68 @@
+.search-menu-btn {
+    --button-color: rgb(212, 212, 212);
+    background: transparent;
+    border: 1px solid var(--button-color, #000);
+    border-radius: 0.2rem;
+    padding: 0.2em 0.5em;
+}
+  
+.search-menu-btn[data-state='closed'] :is(.top, .bottom) {
+    -webkit-animation: to-open-icon 1s forwards;
+            animation: to-open-icon 1s forwards;
+  
+}
+.search-menu-btn[data-state='opened'] :is(.top, .bottom)  {
+    -webkit-animation: to-close-icon 1s forwards;
+            animation: to-close-icon 1s forwards;
+    
+}
+.search-menu-btn .line.top {
+    --rotation: -45deg;
+    transform-origin: 70px 48px;
+    
+  }
+.search-menu-btn .line.bottom {
+    --rotation: 45deg;
+    transform-origin: 65px 60px;
+    
+  }
+  
+  
+@-webkit-keyframes to-close-icon {
+  
+    0% {stroke-dashoffset: 0;}
+    40% {stroke-dashoffset: 79.9;}
+    60% {stroke-dashoffset: 79.9; rotate: var(--rotation)}
+    100% {stroke-dashoffset: 0; rotate: var(--rotation)}
+   
+  }
+  
+  
+@keyframes to-close-icon {
+  
+    0% {stroke-dashoffset: 0;}
+    40% {stroke-dashoffset: 79.9;}
+    60% {stroke-dashoffset: 79.9; rotate: var(--rotation)}
+    100% {stroke-dashoffset: 0; rotate: var(--rotation)}
+   
+  }
+  
+  
+@-webkit-keyframes to-open-icon {
+  
+    0% {stroke-dashoffset: 0; rotate: var(--rotation)}
+    40% {stroke-dashoffset: 79.9; rotate: var(--rotation)}
+    60% {stroke-dashoffset: 79.9; }
+    100% {stroke-dashoffset: 0; }
+   
+  }
+  
+  
+@keyframes to-open-icon {
+  
+    0% {stroke-dashoffset: 0; rotate: var(--rotation)}
+    40% {stroke-dashoffset: 79.9; rotate: var(--rotation)}
+    60% {stroke-dashoffset: 79.9; }
+    100% {stroke-dashoffset: 0; }
+   
+  }

@@ -10,14 +10,17 @@
     
     
 }
+.search-menu-btn[aria-expanded="false"] > .search-field {
+    border: red;
+    display: none;
+}
 .search-field {
     position: absolute;
-    //display: none;
     margin-top: 2em;
     background-color: #1E213A;
     padding: 1em 2em;
-    inset: -2% 0 0 0;
-    opacity: 0.4;
+    inset: 6% 0 0 0;
+    
     
     
 }

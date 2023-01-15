@@ -18,7 +18,8 @@ export class DOM {
         const searchBtn = document.getElementById('search-btn')
         const convertCels = document.getElementById('celsiusConvert')
         const convertFahr = document.getElementById('fahrConvert')
-
+        const menuBtn = document.querySelector('.search-menu-btn')
+        menuBtn.addEventListener('click', DOM.toggleMenu)
         searchBtn.addEventListener('click', DOM.renderWeather)
         convertCels.addEventListener('click', DOM.renderWeather)
         convertFahr.addEventListener('click', () => {
@@ -109,6 +110,18 @@ export class DOM {
             DOM.renderWeather(unit, data)
         } else {
             DOM.renderWeather()
+        }
+    }
+
+    static toggleMenu() {
+        const button = document.querySelector('.search-menu-btn')
+        const currentState = button.getAttribute('data-state')
+        if (!currentState || currentState === 'closed') {
+            button.setAttribute('data-state', 'opened')
+            button.setAttribute('aria-expanded', 'true')
+        } else {
+            button.setAttribute('data-state', 'closed')
+            button.setAttribute('aria-expanded', 'false')
         }
     }
 

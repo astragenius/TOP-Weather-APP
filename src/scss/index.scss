@@ -10,9 +10,10 @@
 @import './base/typography';
 @import './base/utility';
 
-@import './components/weatherBox.scss';
-@import './components/buttons.scss';
-@import './components/highlightBox.scss';
+@import './components/weatherBox';
+@import './components/buttons';
+@import './components/highlightBox';
+@import './components/hamburgerMenu';
 
 @import 'layout/navigation';
 @import 'layout/grid';
