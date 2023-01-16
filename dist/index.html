@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+        <link rel="stylesheet" href="index.css" />
+        <title>TOP-Weather APP</title>
+    <script defer src="index.js"></script><link href="index.css" rel="stylesheet"></head>
+    <body class="bg-main-blueBg-900">
+
+        <main class="main-container ff-raleway wrapper ">
+            
+            <section class="content-left bg-main-blueBg-100 ">
+                <div class=" ">
+                    <header class="content-left-header padding-inline-16">
+                        <button class="btn search-menu-btn margin-block-start-24" aria-controls="search-field" aria-expanded="false" >
+
+                            <svg stroke="var(--button-color)" class="hamburger" viewbox="0 0 100 100" width="30" height="30">
+
+                                <line class="line top"
+                                    x1="90" x2="10" y1="40" y2="40"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="80"
+                                    stroke-dashoffset="0">
+
+                                </line>
+                                
+                                <line class="line bottom"
+                                    x1="10" x2="90" y1="70" y2="70"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="80"
+                                    stroke-dashoffset="0">
+
+                                </line>
+
+
+                            </svg>
+
+                        </button>
+                        <nav class="search-field" id="search-field" data-visible="false">
+                           
+
+                            <div class="search-input-container">
+                                
+                                 <div class="input-wrapper">
+                                    <input type="text" id="cityname" class="form-input" placeholder="Search City" autocomplete="-name">
+                                    <label class="form-label" for="cityname">Search City</label>
+                                </div>
+
+                                <button class="btn search-btn">search</button>
+                            </div>
+
+
+
+
+                            <div class="previous-search-container">
+                               
+                            </div>
+
+            
+                        </nav>
+            
+                    </header>
+                    <div class="main-weather-data-content margin-block-start-36 padding-inline-16">
+
+                        <div class="content-left-img-container">
+                            <img id="img" src="" alt="">
+                        </div>
+                        <div class="content-left-temp-container clr-neutral-200">
+                            <span id="todayTemp" class="fs-1000">15</span>
+                            <span id="todayTempUnit" class="fs-800"></span> 
+                        </div>
+                        <div>
+                            <p class="content-left-status fw-600 fs-700 clr-neutral-400" id="todayWeatherStatus">Shower</p>
+                        </div>
+                        <div class="content-left-date-container clr-neutral-400 margin-block-16">
+                            <div class="fw-500">
+    
+                                <span>Today -</span> 
+                                <span id="todayDate">Fri 5 Jun</span>
+                                <div class="fw-600 flex todayCity">
+                                    <span class="material-symbols-outlined ">
+                                    location_on</span> 
+                                    <span  id="todayCity">Helsinki</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        </div>
+                    </div>
+                </section>
+                    
+            <section class="content-right bg-main-blueBg-900">
+                <div class="">
+
+                    <header class="content-right-header margin-block-16">
+    
+                        <button id="celsiusConvert" class="btn convert-btn"><span>&#8451;</span> </button>
+                        <button id="fahrConvert" class="btn convert-btn"><span>&#8457;</span></button>
+    
+                    </header>
+                </div>
+                 <section class="forecast">
+
+                    
+
+                 </section>
+                 <h2 class="fs-24 clr-neutral-200 padding-20">Today's Highlights</h2>
+                 <section class="highlight clr-neutral-200">
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Wind status</h3>
+                        <p class="fs-800"> <span id="windspeed" class="fw-700">7</span><span class="fs-600">km/h</span> </p>
+                    </div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Humidity</h3>
+                        <p class="fs-800"><span id="humidity" class="fw-700">84</span> <span class="fs-600">%</span></p>
+                        <div>
+                            <div class="progress">
+
+                                <span>0</span>
+                                <span>50</span>
+                                <span>100</span>
+                            </div>
+                            <progress class="progress-bar" id="humidity-progressbar" value="84" max="100"> 32% </progress>
+                        </div>
+                    </div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Visibility</h3>
+                        <p class="fs-800"> <span id="visibility" class="fw-700">6,4 </span> <span class="fs-600 fw-500">km</span> </p>
+                    </div>
+                    <div class="highlight-box bg-main-blueBg-100">
+                        <h3>Air Pressure</h3>
+                        <p class="fs-800"> <span id="airPressure" class="fw-700">998</span> <span class="fs-600 fw-500">mb</span></p>
+                    </div>
+
+                 </section>
+                </section>
+                
+            </main>
+            <footer class="footer clr-neutral-200 fw-600 margin-block-16 wrapper">
+
+                <div>
+                    <p>created by <a href="">Matthias</a> - devChallenge.io </p>
+                </div>
+
+            </footer>
+        
+    </body>
+</html>
