@@ -7,13 +7,6 @@
 
 
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
 
@@ -21,18 +14,18 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/img/the-odin-img.png" alt="Logo" width="300" height="80">
+    <img src="/sreenshots/the-odin-img.png" alt="Logo" width="300" height="80">
   </a>
 
-<h3 align="center">Libary APP</h3>
+<h3 align="center">Weather APP</h3>
 
   <p align="center">
     The Odin Project Assignment
     <br />
     <br />
-    <a href="https://top-libary-app.vercel.app/">View Demo</a>
+    <a href="">View Demo</a>
     ·
-    <a href="https://www.theodinproject.com/lessons/node-path-javascript-library">Link to the Assignment</a>
+    <a href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app">Link to the Assignment</a>
   </p>
 </div>
 
@@ -61,6 +54,7 @@
 
 
 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -85,22 +79,27 @@
 
 ## Feature's
 
-- [x] Create a Book via Inputfield
-- [x] Edit Book-information
-- [x] Delete Book from List
-- [x] Change Read status of each book
-- [x] Book Libary get added in the Browsers localStorage
-- [x] Clear All functionality to delete the Libary in the local storage.
-    
+- Enter the name of the City to get the Weather Information
+- Responsive layout - 375px to 1440px
+- This App use the [open-meteo - Free Weather API](https://open-meteo.com/)
+- Five day's Weather Forecast
+- You can switch between Fahrenheit and Celsius
+- This APP uses the Geolocation Web API to get the user's location.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Screenshot
-![screenshot](./screenshot/libary-app-screenshot.png)
+#### Desktop
+![screenshot](/sreenshots/TOP-weatherAPP-desktop.png)
+#### Mobile
+![screenshot](/sreenshots/TOP-weatherAPP-mobile.png)
 ## Animation 
-
-![animation](/screenshot/animationApp.gif)
+#### Desktop
+![animation](/sreenshots/top-weather-app-desktop.gif)
+#### Mobile
+![animation](/sreenshots/top-weather-app-mobile.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -108,8 +107,12 @@
 
 ## Acknowledgments
 
-* [Local Storage](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
-Good and simple explanation of how to use the localStorage API in the browser.
+#### Weather API
+For this project, I use the [Open-meteo](https://open-meteo.com/) Weather API. To Use this API you don't need an API Key. This API is free to use.
+
+#### Geolocation Web API
+Here is the link to the documentation from MDN [Geolocation Web API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,9 +120,9 @@ Good and simple explanation of how to use the localStorage API in the browser.
 <!-- CONTACT -->
 ## Contact
 
-Astragenius - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+matthias - [@twitter_handle](https://twitter.com/AstraKarl)
 
-Project Link: [Libary APP](https://github.com/astragenius/TOP-Libary-App)
+Project Link: [Weather APP](https://github.com/astragenius/TOP-Libary-App)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
