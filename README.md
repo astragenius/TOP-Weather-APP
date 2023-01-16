@@ -120,9 +120,10 @@ Here is the link to the documentation from MDN [Geolocation Web API](https://dev
 <!-- CONTACT -->
 ## Contact
 
-matthias - [@twitter_handle](https://twitter.com/AstraKarl)
+Twitter Profile - [@AstraKarl](https://twitter.com/AstraKarl)
 
-Project Link: [Weather APP](https://github.com/astragenius/TOP-Libary-App)
+FrontEnd Mentor Profile - [Matthias/astragenius](https://www.frontendmentor.io/profile/astragenius)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
