@@ -23,7 +23,7 @@
     The Odin Project Assignment
     <br />
     <br />
-    <a href="">View Demo</a>
+    <a href="https://top-weather-app.vercel.app/">View Demo</a>
     ·
     <a href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app">Link to the Assignment</a>
   </p>
