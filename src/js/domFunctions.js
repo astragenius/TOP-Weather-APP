@@ -1,10 +1,9 @@
-import { fetchData, getInput, getWeatherData } from './apiLogic'
+import { fetchData, getInput } from './apiLogic'
 import {
     formatTime,
     getWeatherStatus,
     getWeatherIcon,
     convertKm,
-    errorFunction,
     getUserCords,
 } from './utilityFunctions'
 
@@ -127,19 +126,4 @@ export class DOM {
             nav.setAttribute('data-visible', 'false')
         }
     }
-
-    static addPreviousBtn() {
-        const previousContainer = document.querySelector(
-            '.previous-search-container'
-        )
-        const input = getInput()
-        if (input === '') {
-            console.log('test')
-            return
-        } else {
-            previousContainer.innerHTML += `<button class="btn previous-btn">${input}</button>`
-        }
-    }
-
-    static renderError() {}
 }
